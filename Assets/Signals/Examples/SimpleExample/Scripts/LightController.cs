@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LightController : MonoBehaviour {
+
 	[SerializeField]
 	Signal lightSignal;
 
 	[SerializeField]
-	Light light;
+	Light targetLight;
 
 	void OnEnable()
 	{
@@ -22,6 +23,6 @@ public class LightController : MonoBehaviour {
 
     private void OnLightSignal(object obj)
     {
-        light.enabled =!light.enabled;
+        targetLight.enabled =!targetLight.enabled;
     }
 }

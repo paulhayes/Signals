@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightSignal: {fileID: 11400000, guid: 1fadacbb51999451e9d98f9d9527e039, type: 2}
-  light: {fileID: 1025212268}
+  targetLight: {fileID: 1025212268}
 --- !u!1 &1174832850
 GameObject:
   m_ObjectHideFlags: 0
