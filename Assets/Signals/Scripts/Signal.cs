@@ -8,6 +8,19 @@ public class Signal : ScriptableObject
 {
 	event System.Action<object> listeners;
 
+	[HideInInspector]
+	[SerializeField]
+	TypeEnum dataType;
+
+	public enum TypeEnum {
+		None,
+		Int,
+		Float,
+		Boolean,
+		String,
+		Object
+	}
+
 	internal void TriggerAmbiguous(object obj)
 	{
 		if( listeners != null){
