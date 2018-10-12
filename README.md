@@ -2,9 +2,9 @@
 Small Unity library that allows decoupled scripts to communicate events to each other easily.
 
 #### Benefits
-* Signals can be triggered from the inspector for testing purposes
 * Organise your games signals using filesystem directory structure
-* Uses Unity's deserialization system for dependancy injection
+* Reduces FindObjectsOfType and GetComponent and other reference hunting code.
+* Signals can be triggered from the inspector for testing purposes
 * Scene independant ( define once, use in multiple scenes )
 
 ## Installation
@@ -14,7 +14,7 @@ Download and install latest release [unitypackage](https://github.com/paulhayes/
 Examples can be found in ```Assets/Signals/Examples```
 
 
-Create Signals from main menu Assets->Create->Signal. 
+Create Signals from main menu ***Assets->Create->Signal***. 
 
 
 #### Sender code
