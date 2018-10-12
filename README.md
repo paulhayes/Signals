@@ -2,7 +2,7 @@
 Small Unity library that allows decoupled scripts to communicate events to each other easily. 
 
 ## Installation
-Download and install latest release [unitypackage](https://github.com/paulhayes/Signals/releases/download/v0.1.0/Signals.unitypackage)
+Download and install latest release [unitypackage](https://github.com/paulhayes/Signals/releases/download/v0.1.1/Signals.unitypackage)
 
 ## Usage
 Examples can be found in ```Assets/Signals/Examples```
