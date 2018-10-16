@@ -7,9 +7,6 @@ public abstract class AbstractPollable<T> : ScriptableObject, ISerializationCall
 	[SerializeField]
 	T value;
 
-	//This is purely used by serialzation so value can be modified in inspector
-	//T oldValue;
-
 	public T Value {
 		get {
 			return value;
@@ -32,26 +29,20 @@ public abstract class AbstractPollable<T> : ScriptableObject, ISerializationCall
 		return changedFrame == Time.frameCount;
 	}
 
+	public bool HasBecome(T value){
+		return HasChanged() && this.value.Equals(value);
+    }
+
 	public T GetValue(){
 		return value;
 	}
 
     public void OnBeforeSerialize()
     {
-		//Debug.Log("B "+Time.frameCount);
 		changedFrame = Time.frameCount+1;
-        //oldValue = value;
     }
 
     public void OnAfterDeserialize()
     {
-		/* 
-		Debug.Log("A "+oldValue.Equals(value));
-
-		if(oldValue.Equals(value) ){
-			changedFrame  = -1;
-		}
-		oldValue = default(T);
-		*/
     }
 }
